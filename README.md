@@ -1,4 +1,4 @@
-![image](https://github.com/Rakeshraki-007/VLSI-LAB-EXP-5/assets/161815387/50573758-2a5c-48b1-96c4-bc410fb07b0f)# VLSI-LAB-EXP-5
+
 SIMULATION AND IMPLEMENTATION OF FINITE STATE MACHINE
 
 AIM: To simulate and synthesis finite state machine using Xilinx ISE.
