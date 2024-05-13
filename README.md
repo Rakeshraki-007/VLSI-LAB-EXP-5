@@ -86,12 +86,10 @@ begin
 end 
 endmodule
 
-
 OUTPUT:
 
 ![image](https://github.com/Rakeshraki-007/VLSI-LAB-EXP-5/assets/161815387/ffa39d95-57b1-4f0c-ab86-4a725d39dfaf)
 
 RESULT:
-
-
+     Thus the simulate and synthesis finite state machine using vivado2023.3 is verified
 
