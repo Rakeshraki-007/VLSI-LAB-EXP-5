@@ -1,4 +1,4 @@
-# VLSI-LAB-EXP-5
+![image](https://github.com/Rakeshraki-007/VLSI-LAB-EXP-5/assets/161815387/50573758-2a5c-48b1-96c4-bc410fb07b0f)# VLSI-LAB-EXP-5
 SIMULATION AND IMPLEMENTATION OF FINITE STATE MACHINE
 
 AIM: To simulate and synthesis finite state machine using Xilinx ISE.
@@ -24,7 +24,8 @@ STEP:12 Load the Bit file into the SPARTAN 6 FPGA
 
 Logic Diagram :
 
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-5/assets/6987778/34ec5d63-2b3b-4511-81ef-99f4572d5869)
+![image](https://github.com/Rakeshraki-007/VLSI-LAB-EXP-5/assets/161815387/d0826f96-6826-4a7e-9614-16572374bfaa)
+
 
 
 VERILOG CODE:
