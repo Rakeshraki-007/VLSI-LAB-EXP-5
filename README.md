@@ -28,7 +28,7 @@ Logic Diagram :
 
 
 VERILOG CODE:
-
+~~~
 module Sequence_Detector_Moore(clock,reset,sequence_in,detector_out);
 input clock, reset, sequence_in; 
 output reg detector_out; 
@@ -85,6 +85,7 @@ begin
  endcase
 end 
 endmodule
+~~~
 
 OUTPUT:
 
