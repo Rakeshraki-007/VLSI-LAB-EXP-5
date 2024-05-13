@@ -24,17 +24,72 @@ STEP:12 Load the Bit file into the SPARTAN 6 FPGA
 
 Logic Diagram :
 
-![image](https://github.com/Rakeshraki-007/VLSI-LAB-EXP-5/assets/161815387/d0826f96-6826-4a7e-9614-16572374bfaa)
-
+![image](https://github.com/Rakeshraki-007/VLSI-LAB-EXP-5/assets/161815387/2d183978-cdb5-4539-ac67-8ca3ffb396ad)
 
 
 VERILOG CODE:
 
-----Type Verilog Code
+module Sequence_Detector_Moore(clock,reset,sequence_in,detector_out);
+input clock, reset, sequence_in; 
+output reg detector_out; 
+parameter  S0=2'b00,S1=2'b01,S2=2'b10,S3=2'b11;
+reg [1:0] current_state, next_state; 
+// sequential memory of the Moore FSM
+always @(posedge clock, posedge reset)
+begin
+ if(reset==1) 
+ current_state <= S0;
+ else
+ current_state <= next_state; 
+end 
+// to determine next state 
+always @(current_state,sequence_in)
+begin
+ case(current_state) 
+ 	S0:begin
+		if(sequence_in==1)
+   			next_state = S1;
+  		else
+   			next_state = S0;
+ 	   end
+ 	S1:begin
+if(sequence_in==0)
+   			next_state = S2;
+  		else
+   			next_state = S1;
+ 	   end
+S2:begin
+  	if(sequence_in==1)
+   		next_state = S3;
+ 	 else
+   		next_state = S0;
+    end 
+  S3:begin
+  	if(sequence_in==0)
+   		next_state = S0;
+  	else
+   		next_state = S1;
+     end
+	default:next_state = S0;
+endcase
+end
+// to determine the output of the Moore FSM, output only depends on current state
+always @(current_state)
+begin 
+ case(current_state) 
+ 	S0:   detector_out = 0;
+ 	S1:   detector_out = 0;
+ 	S2:  detector_out = 0;
+ 	S3:  detector_out = 1;
+ 	default:  detector_out = 0;
+ endcase
+end 
+endmodule
+
 
 OUTPUT:
 
------Place a Waveform Generated from Xilinx ISE------------
+![image](https://github.com/Rakeshraki-007/VLSI-LAB-EXP-5/assets/161815387/ffa39d95-57b1-4f0c-ab86-4a725d39dfaf)
 
 RESULT:
 
